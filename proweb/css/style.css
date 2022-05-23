@@ -1,0 +1,320 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+body {
+	/* font-style: normal;
+	font-size: 18px;
+	line-height: 27px;
+	font-family: 'Open Sans', sans-serif; */
+	/* font: font-style font-weight font-size/line-height font-family; */
+	font: normal 18px/27px 'Open Sans', sans-serif;
+}
+
+a{color: #f0ab64; text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+.container{
+	width: 1147px;
+	margin: 0 auto;
+}
+
+.main_tt{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 55px;
+    letter-spacing: 0.025em; /* 1000 = 1em */
+    text-transform: uppercase;
+}
+
+.fancy-box{
+    padding: 0 42px;
+    display: inline-block;
+    line-height: 107px;
+}
+.red{
+    background: rgba(246, 96, 76, 0.9);
+}
+
+.btn{
+    padding: 0 30px;
+    border: 1px solid #f0ad64;
+    color: #f0ab64;
+    background: transparent; /* background: none; */
+    line-height: 52px;
+    display: inline-block;
+    transition: 0.3s;
+}
+.btn:hover{
+    background: #f0ad64;
+    color: #fff;
+}
+
+
+/* header */
+header{
+	position: fixed;
+	left: 0; right: 0; top: 0;
+	background-color: rgba(0, 0, 0, .8);
+	z-index: 100;
+	padding: 27px 0;
+}
+header .logo{float: left;}
+header .logo a{
+	display: block; 
+	width: 54px; height: 54px;
+	background:url(../images/logo.png);
+	text-indent: -99999px; /* 들여쓰기(logo글자 살리기 위해) */
+}
+header nav{float: right;}
+header nav ul{}
+header nav ul li{float: left; margin-left: 30px;}
+header nav ul li a{
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 0.025em;
+	/* 1000 = 1em */
+	text-transform: uppercase;
+	line-height: 54px;
+}
+
+
+/* banner */
+.banner{position: relative;}
+.banner .banner_list{}
+.banner .banner_list .slide{
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    /* background: url(../images/slide-1-bg.jpg)no-repeat center top/cover; */
+    padding-top: 162px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.banner .banner_list .slide1{
+    background-image: url(../images/slide-1-bg.jpg);
+}
+.banner .banner_list .slide2{
+    background-image: url(../images/slide-2-bg.jpg);
+}
+.banner .banner_list .slide3{
+    background-image: url(../images/slide-3-bg.jpg);
+}
+.banner .slide .slide_contents{
+    background: rgba(0, 0, 0, .8);
+    width: 700px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 81px 0 57px 0;
+    margin-top: -27px;
+}
+.banner .slide .slide_contents p{
+    margin-bottom: 41px;
+}
+.banner .slide .slide_contents .btn{}
+
+.banner .slick-arrow{
+	position: absolute;
+	left: 50%; top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+	color: rgba(255, 255, 255, 0.5);
+
+}
+.banner .slick-prev{
+	visibility: hidden;
+	margin-left: -633px;
+}
+.banner .slick-prev::after{
+	visibility: visible;
+	content: "\f053";
+	font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+	font-size: 55px;
+}
+.banner .slick-next{
+	visibility: hidden;
+	margin-left: 507px;
+}
+.banner .slick-next::after{
+	visibility: visible;
+	content: "\f054";
+	font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+	font-size: 55px;
+}
+
+
+.banner .slick-dots{
+	position: absolute;
+	left: 50%; bottom: 26px;
+	transform: translateX(-50%);
+}
+.banner .slick-dots li{
+	display: inline-block;
+	width: 15px; height: 15px;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 50%;
+	text-indent: -9999px; /* 글자 없애기 */
+	margin: 0 10px;
+	transition: 0.3s;
+}
+.banner .slick-dots li.slick-active{
+	/* width: 30px;
+	border-radius: 10px; 타원형 */
+	border: 2px solid #fff;
+	box-sizing: border-box;
+	background: none;
+	vertical-align: -2px;
+	/* inline요소 정렬 시 수평 정렬이 안 맞을 경우에 사용 */
+}
+
+
+/* main_content */
+.main_content{
+	text-align: center;
+	padding: 74px 0 98px;
+}
+.main_content .content_tt{
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	letter-spacing: 0.025em;
+	color: #2e2e2e;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-bottom: 54px;
+}
+.main_content .project_link{
+	font-style: italic;
+	font-size: 18px;
+	margin-bottom: 54px;
+	letter-spacing: 0.025em;
+	color: #f6604c;
+}
+.main_content .project_link a{}
+.main_content .project_list{}
+.main_content .project_list li{
+	position: relative;
+	float: left;
+	margin-right: 30px; margin-bottom: 30px;
+	width: 354px; height: 354px;
+	border: 1px solid #919191;
+	padding: 3px;
+	box-sizing: border-box;
+}
+/* nth-child(3n) : 3의 배수 호출 */
+/* nth-child(2n) : 2의 배수, 짝수 */
+/* nth-child(2n + 1) : 홀수 */
+.main_content .project_list li:nth-child(3n){
+	margin-right: 0;
+}
+.main_content .project_list li:nth-child(4),
+.main_content .project_list li:nth-child(5),
+.main_content .project_list li:nth-child(6){
+	margin-bottom: 0;
+}
+.main_content .project_list li img{width: 100%;}
+.main_content .project_list li .hover_contents{
+	position: absolute; padding-top: 77px;
+	left: 3px; top: 3px; right: 3px; bottom: 3px;
+	background-color: rgba(0, 0, 0, .75);
+	opacity: 0; transition: .4s;
+}
+.main_content .project_list li:hover .hover_contents{
+	opacity: 1;
+}
+.main_content .project_list li .hover_contents h4{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300; font-size: 23px;
+	letter-spacing: 0.025em;
+	color: #f4af55; margin-bottom: 54px;
+}
+.main_content .project_list li .hover_contents a{
+	font-size: 14px; color: #fff;
+	letter-spacing: 0.1em;
+}
+
+
+/* footer */
+footer{
+	position: relative; text-align: center;
+}
+footer .envelope_icon{
+	position: absolute;
+	left: 50%; transform: translateX(-50%);
+	top: -54px;
+}
+footer .envelope_icon i{
+	font-size: 55px; color: #fff;
+	line-height: 81px;
+}
+footer .fancy-box{
+	line-height: 0;
+	padding: 0 34px;
+}
+.fancy-box.orange{
+	background: rgba(244, 175, 85, .9);
+}
+
+footer .subscribe{
+	background: #333538;
+	padding: 81px 0 67px;
+}
+footer .subscribe p{
+	width: 750px;  
+	/* br태그로 두 줄 만들기X, 영역 넓이를 잡아야함 */
+	margin: 0 auto;
+	color: #fff; font-size: 18px;
+	letter-spacing: 0.025em;
+	text-align: center;
+}
+
+footer .subscribe input[type="email"]{
+	/* input이며 type이 email인 요소 
+	input은 기본적으로 padding, border가 있음*/
+	border: none;
+	width: 300px; height: 57px;
+	padding: 0 18px; box-sizing: border-box;
+	margin-top: 65px; margin-right: 20px;
+	outline: none; /* 안쪽 클릭하면 생기는 테두리 제거 */
+}
+footer .subscribe input[type="email"]::placeholder{
+	font-style: italic; color: #989898;
+}
+footer .subscribe input[type="submit"]{
+	line-height: 55px; /* 테두리 두께 제외 */
+	vertical-align: -2px;
+	color: #f0ad64;
+	font-size: 20px; font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+footer .share{
+	padding: 54px 0;
+}
+footer .share a{
+	display: inline-block;
+	width: 25px; height: 25px;
+	border-radius: 3px;
+	background: #f6604c;
+	color: #fff;
+}
+footer .share a:first-child{margin-right: 10px;}
+footer .share a:hover{
+	background: #ebebeb;
+	color: #f6604c;
+}
+footer .share span{
+	display: block;
+	padding: 54px 0;
+	color: #333;
+}
